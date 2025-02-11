@@ -2,7 +2,11 @@ pipeline {
     agent any
     stages {
         stage('Jenkinsfile added'){
-            echo '${env}'
+           steps{
+                step('test-step'){
+                    echo '${env}'
+                }
+           }
         }
     }
 }
