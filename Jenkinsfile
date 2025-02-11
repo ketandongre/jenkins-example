@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Jenkinsfile added'){
            steps{
-                echo '${env}'
+                script {
+                    echo "${env}"
+                }
            }
         }
     }
